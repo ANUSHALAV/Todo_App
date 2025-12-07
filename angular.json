@@ -26,7 +26,11 @@
               }
             ],
             "styles": [
+              "bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
+            ],
+             "scripts": [
+              "bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -83,7 +87,11 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "bootstrap/dist/js/bootstrap.min.js"
             ]
           }
         }
