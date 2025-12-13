@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-around align-items-center">
-    <input type="text" class="form-control" placeholder="Enter Your Task">
-    <button class="btn btn-primary">Add</button>
+<div class="d-flex justify-content-around align-items-center gap-2">
+    <input type="text" class="form-control py-2 px-3" placeholder="Add New Todo" [(ngModel)]="taskObj.Task">
+    <button class="btn btn-primary py-2 px-2" (click)="addNewTask()">Add</button>
 </div>
