@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AddTodo {
 
-  taskObj: any ={};
+  taskObj: any = {};
   lstTasks: any = [];
 
   addNewTask() {
@@ -18,9 +18,19 @@ export class AddTodo {
     if (this.taskObj.Task == '' || this.taskObj.Task == undefined) {
       alert("Please Enter a Task");
       return;
-    }else{
-      alert("Task Added Successfully");
+    } else {
+      this.getTask();
+      let taskCount = this.lstTasks.length;
+      this.taskObj.Id = taskCount + 1;
+      this.taskObj.IsCompleted = false;
+      this.lstTasks.push(this.taskObj);
+      localStorage.setItem('Tasks', JSON.stringify(this.lstTasks));
+      this.taskObj = {};
     }
+  }
+
+  getTask() {
+    this.lstTasks = JSON.parse(localStorage.getItem("Tasks") || '[]');
   }
 
 
