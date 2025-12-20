@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ShowTodo } from '../show-todo/show-todo';
 
 @Component({
   selector: 'app-add-todo',
-  imports: [FormsModule],
+  imports: [FormsModule,ShowTodo],
   templateUrl: './add-todo.html',
   styleUrl: './add-todo.css',
 })

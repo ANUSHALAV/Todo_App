@@ -2,3 +2,6 @@
     <input type="text" class="form-control py-2 px-3" placeholder="Add New Todo" [(ngModel)]="taskObj.Task">
     <button class="btn btn-primary py-2 px-2" (click)="addNewTask()">Add</button>
 </div>
+<div>
+    <app-show-todo [lstTasks]="lstTasks"></app-show-todo>
+</div>

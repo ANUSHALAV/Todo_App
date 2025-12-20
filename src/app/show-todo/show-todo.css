@@ -1,0 +1,20 @@
+.tasks {
+    max-height: 400px;
+    min-height: 400px;
+    overflow: auto;
+}
+
+.tasks::-webkit-scrollbar {
+  width:6px;
+  border-radius:6px;
+  background-color: #dfd7d7;
+}
+
+.tasks::-webkit-scrollbar-thumb {
+border-radius:6px;
+  background-color: #555;
+}
+
+.tasks::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}

@@ -1,8 +1,8 @@
-<div class="tasks mt-5">
+<div class="tasks mt-4 p-2">
     @for(task of lstTasks; track task.Id){
     <div class="task d-flex justify-content-center align-items-center mb-2">
-        <div class="col-11 bg-white text-dark d-flex align-items-center py-2 px-2 gap-5">
-            <input type="checkbox" class="form-check-input px-3 py-3" (click)="onChecked($event,task.Id)" >
+        <div class="col-11 bg-body-secondary text-dark d-flex align-items-center py-2 px-2 gap-5">
+            <input type="checkbox" [(ngModel)]="task.IsCompleted" class="form-check-input border border-1 border-dark px-3 py-3" (click)="onChecked($event,task.Id)" >
             <p class="m-0" [ngClass]="task.IsCompleted==true ? 'text-decoration-line-through' : ''">{{task.Task}}</p>
         </div>
         <button class="btn btn-danger rounded-0" style="padding-block:0.87rem;" (click)="onDelete(task.Id)"><i class="bi bi-trash"></i></button>

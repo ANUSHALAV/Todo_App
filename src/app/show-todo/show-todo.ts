@@ -1,20 +1,23 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-show-todo',
-  imports: [NgClass],
+  imports: [NgClass, FormsModule],
   templateUrl: './show-todo.html',
   styleUrl: './show-todo.css',
 })
 export class ShowTodo {
-  lstTasks: any = [];
+  @Input() lstTasks: any = [];
 
   constructor() {
-    this.getTask();
   }
 
-  getTask() {
+  ngOnChanges() {
+  }
+
+  ngOnInit() {
     this.lstTasks = JSON.parse(localStorage.getItem("Tasks") || '[]');
   }
 

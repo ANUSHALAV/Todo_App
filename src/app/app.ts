@@ -6,7 +6,7 @@ import { ShowTodo } from './show-todo/show-todo';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header,AddTodo,ShowTodo],
+  imports: [RouterOutlet,Header,AddTodo],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
